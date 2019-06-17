@@ -6,10 +6,10 @@ import * as serviceWorker from './serviceWorker';
 
 import { createStore } from 'redux';
 import { Provider } from 'react-redux';
-import todoApp from './reducers/reducer.js';
+import reducer from '../src/reducers/reducer.js';
 
-let store = createStore(todoApp);
-let rootElement = document.getElementById('root');
+const store = createStore(reducer , window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
+const rootElement = document.getElementById('root');
 ReactDOM.render(
     <Provider store={store}>
         <App />
