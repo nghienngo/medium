@@ -4,7 +4,7 @@ import {increment, decrement, reset} from '../actions/actions';
 
 const mapStateToProps = (state) => {
     return {
-        counter: state.counter
+        counter: state.counterReducer.counter
     }
 }
 
